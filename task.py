@@ -1,3 +1,7 @@
+
+
+from collections import UserDict
+
 #----------------------------------------head------------------------------------------------------------------
 class Field:
     def __init__(self, value):
@@ -46,7 +50,6 @@ class Record:
     def __str__(self):
         return f"Contact name: {self.name.value}, phones: {'; '.join(p.value for p in self.phones)}"
 #---------------------------------------records management--------------------------------------------------------------------------------
-from collections import UserDict
 
 class AddressBook(UserDict):
     def add_record(self, record):
